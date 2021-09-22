@@ -1,0 +1,50 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "b7ced79f-cde6-4eed-a13d-26e43f4637f7",
+  "name": "add delete overrides test",
+  "description": "The AddDeleteOverridesTest function.",
+  "language": "C#",
+  "overrides": {
+    "Box Position": {
+      "context": "[*discriminator=Elements.Box]",
+      "identity": {
+        "Original Position": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      },
+      "schema": {
+        "Origin": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      }
+    },
+    "Box Properties": {
+      "context": "[*discriminator=Elements.Box]",
+      "identity": {
+        "Original Position": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      },
+      "schema": {
+        "Width": {
+          "type": "number",
+          "$hyparUnitType": "length",
+          "default": 1.0
+        },
+        "Depth": {
+          "type": "number",
+          "$hyparUnitType": "length",
+          "default": 1.0
+        },
+        "Height": {
+          "type": "number",
+          "$hyparUnitType": "length",
+          "default": 1.0
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "0.9.5-alpha.5"
+}
