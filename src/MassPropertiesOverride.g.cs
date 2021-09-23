@@ -4,13 +4,13 @@ using System.Collections.Generic;
 namespace AddDeleteOverridesTest
 {
 	/// <summary>
-	/// Override metadata for BoxPositionOverride
+	/// Override metadata for MassPropertiesOverride
 	/// </summary>
-	public partial class BoxPositionOverride
+	public partial class MassPropertiesOverride
 	{
-        public static string Name = "Box Position";
+        public static string Name = "Mass Properties";
         public static string Dependency = null;
-        public static string Context = "[*discriminator=Elements.Box]";
+        public static string Context = "[*discriminator=Elements.Mass]";
 
         /// <summary>
         /// Get the override name for this override.

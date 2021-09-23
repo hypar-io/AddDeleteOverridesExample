@@ -2,11 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dependencies\AddDeleteOverridesTest.Dependencies.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Hypar.Elements" Version="0.9.3" />
-    <PackageReference Include="Hypar.Functions" Version="0.9.4" />
+    <ProjectReference Include="..\..\elements\Elements\src\Elements.csproj" />
+    <ProjectReference Include="..\..\Hypar\Hypar.Functions\src\Hypar.Functions.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

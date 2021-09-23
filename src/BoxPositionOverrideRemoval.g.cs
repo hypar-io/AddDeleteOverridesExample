@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace AddDeleteOverridesTest
 {
 	/// <summary>
-	/// Override metadata for BoxPositionOverride
+	/// Override metadata for BoxPositionOverrideRemoval
 	/// </summary>
-	public partial class BoxPositionOverride
+	public partial class BoxPositionOverrideRemoval
 	{
-        public static string Name = "Box Position";
+        public static string Name = "Box Position Removal";
         public static string Dependency = null;
         public static string Context = "[*discriminator=Elements.Box]";
 

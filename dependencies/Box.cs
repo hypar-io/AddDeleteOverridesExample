@@ -8,8 +8,12 @@ namespace Elements
     public class Box : GeometricElement
     {
         private Vector3 origin;
+        private double depth;
 
-        public double Depth { get; set; }
+        public double Depth
+        {
+            get; set;
+        }
         public double Width { get; set; }
         public double Height { get; set; }
 
@@ -33,7 +37,12 @@ namespace Elements
             this.Height = height;
             this.Origin = origin;
             this.OriginalPosition = origin;
-            this.Representation = new Extrude(Polygon.Rectangle(width, depth), height, Vector3.ZAxis, false);
+            this.UpdateRepresentations();
+        }
+
+        public override void UpdateRepresentations()
+        {
+            this.Representation = new Extrude(Polygon.Rectangle(this.Width, this.Depth), this.Height, Vector3.ZAxis, false);
         }
     }
 }

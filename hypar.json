@@ -13,9 +13,23 @@
         }
       },
       "schema": {
-        "Origin": {
-          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        "Transform": {
+          "$ref": "https://prod-api.hypar.io/schemas/Transform"
         }
+      },
+      "behaviors": {
+        "add": {
+          "schema": {
+            "Origin": {
+              "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+            }
+          }
+        },
+        "remove": true
+      },
+      "verbs": {
+        "add": "Add Box",
+        "remove": "Remove Box"
       }
     },
     "Box Properties": {
@@ -42,8 +56,74 @@
           "default": 1.0
         }
       }
+    },
+    "Mass": {
+      "context": "[*discriminator=Elements.Mass]",
+      "identity": {
+        "Profile Centroid": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      },
+      "schema": {
+        "Perimeter": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        }
+      },
+      "behaviors": {
+        "add": {
+          "schema": {
+            "Perimeter": {
+              "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+          }
+        },
+        "remove": true
+      }
+    },
+    "Mass Properties": {
+      "context": "[*discriminator=Elements.Mass]",
+      "identity": {
+        "Profile Centroid": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      },
+      "schema": {
+        "Height": {
+          "type": "number",
+          "$hyparUnitType": "length"
+        },
+        "Color": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Color.json"
+        }
+      }
+    },
+    "Facade": {
+      "context": "[*discriminator=Elements.FacadeFace]",
+      "identity": {
+        "Rough Location": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        }
+      },
+      "schema": {
+        "Grid": {
+          "$ref": "https://prod-api.hypar.io/schemas/Grid1dInput"
+        }
+      },
+      "behaviors": {
+        "add": {
+          "schema": {
+            "Line": {
+              "$ref": "https://prod-api.hypar.io/schemas/Line"
+            }
+          }
+        },
+        "remove": true
+      }
     }
   },
+  "element_types": [
+    "https://prod-api.hypar.io/schemas/Grid1dInput"
+  ],
   "repository_url": "https://github.com/hypar-io/function",
   "last_updated": "0001-01-01T00:00:00",
   "cli_version": "0.9.5-alpha.5"

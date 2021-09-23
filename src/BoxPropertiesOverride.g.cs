@@ -12,5 +12,12 @@ namespace AddDeleteOverridesTest
         public static string Dependency = null;
         public static string Context = "[*discriminator=Elements.Box]";
 
+        /// <summary>
+        /// Get the override name for this override.
+        /// </summary>
+        public string GetName() {
+			return Name;
+		}
+
 	}
 }
