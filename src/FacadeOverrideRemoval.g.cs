@@ -6,7 +6,7 @@ namespace AddDeleteOverridesTest
 	/// <summary>
 	/// Override metadata for FacadeOverrideRemoval
 	/// </summary>
-	public partial class FacadeOverrideRemoval
+	public partial class FacadeOverrideRemoval : IOverride
 	{
         public static string Name = "Facade Removal";
         public static string Dependency = null;
@@ -17,6 +17,10 @@ namespace AddDeleteOverridesTest
         /// </summary>
         public string GetName() {
 			return Name;
+		}
+
+		public object GetIdentity() {
+			return Identity;
 		}
 
 	}

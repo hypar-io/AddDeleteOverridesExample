@@ -6,7 +6,7 @@ namespace AddDeleteOverridesTest
 	/// <summary>
 	/// Override metadata for BoxPositionOverrideAddition
 	/// </summary>
-	public partial class BoxPositionOverrideAddition
+	public partial class BoxPositionOverrideAddition : IOverride
 	{
         public static string Name = "Box Position Addition";
         public static string Dependency = null;
@@ -17,6 +17,10 @@ namespace AddDeleteOverridesTest
         /// </summary>
         public string GetName() {
 			return Name;
+		}
+
+		public object GetIdentity() {
+			return Identity;
 		}
 
 	}

@@ -467,15 +467,16 @@ namespace AddDeleteOverridesTest
     
     {
         [Newtonsoft.Json.JsonConstructor]
-        public BoxPositionOverrideAddition(string @id, BoxPositionOverrideAdditionValue @value)
+        public BoxPositionOverrideAddition(string @id, BoxPositionIdentity @identity, BoxPositionOverrideAdditionValue @value)
         {
             var validator = Validator.Instance.GetFirstValidatorForType<BoxPositionOverrideAddition>();
             if(validator != null)
             {
-                validator.PreConstruct(new object[]{ @id, @value});
+                validator.PreConstruct(new object[]{ @id, @identity, @value});
             }
         
             this.Id = @id;
+            this.Identity = @identity;
             this.Value = @value;
         
             if(validator != null)
@@ -486,6 +487,9 @@ namespace AddDeleteOverridesTest
     
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Id { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("Identity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public BoxPositionIdentity Identity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("Value", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public BoxPositionOverrideAdditionValue Value { get; set; }
@@ -499,15 +503,16 @@ namespace AddDeleteOverridesTest
     
     {
         [Newtonsoft.Json.JsonConstructor]
-        public MassOverrideAddition(string @id, MassOverrideAdditionValue @value)
+        public MassOverrideAddition(string @id, MassIdentity @identity, MassOverrideAdditionValue @value)
         {
             var validator = Validator.Instance.GetFirstValidatorForType<MassOverrideAddition>();
             if(validator != null)
             {
-                validator.PreConstruct(new object[]{ @id, @value});
+                validator.PreConstruct(new object[]{ @id, @identity, @value});
             }
         
             this.Id = @id;
+            this.Identity = @identity;
             this.Value = @value;
         
             if(validator != null)
@@ -518,6 +523,9 @@ namespace AddDeleteOverridesTest
     
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Id { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("Identity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public MassIdentity Identity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("Value", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public MassOverrideAdditionValue Value { get; set; }
@@ -531,15 +539,16 @@ namespace AddDeleteOverridesTest
     
     {
         [Newtonsoft.Json.JsonConstructor]
-        public FacadeOverrideAddition(string @id, FacadeOverrideAdditionValue @value)
+        public FacadeOverrideAddition(string @id, FacadeIdentity @identity, FacadeOverrideAdditionValue @value)
         {
             var validator = Validator.Instance.GetFirstValidatorForType<FacadeOverrideAddition>();
             if(validator != null)
             {
-                validator.PreConstruct(new object[]{ @id, @value});
+                validator.PreConstruct(new object[]{ @id, @identity, @value});
             }
         
             this.Id = @id;
+            this.Identity = @identity;
             this.Value = @value;
         
             if(validator != null)
@@ -550,6 +559,9 @@ namespace AddDeleteOverridesTest
     
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Id { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("Identity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public FacadeIdentity Identity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("Value", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public FacadeOverrideAdditionValue Value { get; set; }

@@ -6,7 +6,7 @@ namespace AddDeleteOverridesTest
 	/// <summary>
 	/// Override metadata for MassPropertiesOverride
 	/// </summary>
-	public partial class MassPropertiesOverride
+	public partial class MassPropertiesOverride : IOverride
 	{
         public static string Name = "Mass Properties";
         public static string Dependency = null;
@@ -17,6 +17,10 @@ namespace AddDeleteOverridesTest
         /// </summary>
         public string GetName() {
 			return Name;
+		}
+
+		public object GetIdentity() {
+			return Identity;
 		}
 
 	}

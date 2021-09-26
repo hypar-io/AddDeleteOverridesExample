@@ -6,7 +6,7 @@ namespace AddDeleteOverridesTest
 	/// <summary>
 	/// Override metadata for MassOverrideRemoval
 	/// </summary>
-	public partial class MassOverrideRemoval
+	public partial class MassOverrideRemoval : IOverride
 	{
         public static string Name = "Mass Removal";
         public static string Dependency = null;
@@ -17,6 +17,10 @@ namespace AddDeleteOverridesTest
         /// </summary>
         public string GetName() {
 			return Name;
+		}
+
+		public object GetIdentity() {
+			return Identity;
 		}
 
 	}
